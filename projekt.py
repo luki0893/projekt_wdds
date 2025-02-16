@@ -92,5 +92,5 @@ for subset in ds.data_split(0.7, 0.2, 0.1):
     print(f"Ilość elementów w zbiorze: {len(subset)}")
 
 print(ds.get_number_of_classes())
-print(ds.class_data(13, 'NonToxic'))
+print(ds.class_data(-1, 'NonToxic'))
 ds.save_to_csv(train_data, 'train_data.csv')
