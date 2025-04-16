@@ -15,9 +15,9 @@ class Dataset:
             with open(filepath, mode='r', encoding=encoding) as filehandler:
                 for line_idx, line in enumerate(filehandler):
                     if line_idx == 0 and header:
-                        self.labels.append(line.split(delimiter))
+                        self.labels.append(line.strip().split(delimiter))
                     else:
-                        self.data.append(line.split(delimiter))
+                        self.data.append(line.strip().split(delimiter))
 
 
         except IOError as err:
